@@ -32,6 +32,8 @@
             @if ($posts->count())
                 @foreach($posts as $post)
                     <x-post :post="$post" />
+
+                    <footer><a href="{{ route('posts.show', $post) }}">View post</a></footer>
                 @endforeach
 
                 {{ $posts->links() }}
